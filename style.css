@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 
+/* 1150 */
+
 * {
     margin: 0;
     padding: 0;
@@ -36,6 +38,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    border-radius: 10px;
 }
 
 #content {
@@ -60,7 +63,8 @@ p {
 img {
     display: block;
     width: 550px;
-    margin-left: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 h2 {
@@ -87,6 +91,8 @@ h2 {
 
 .image {
     position: relative;
+    
+    margin-left: 50px;
 }
 
 .overlay {
@@ -95,7 +101,58 @@ h2 {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50px;
+    left: 0;
     right: 0;
-    background-color: rgba(170, 92, 219, 0.5);
+    background-color: #aa5cdbb3;
+    mix-blend-mode: multiply;
+}
+
+.special-text {
+    color: #aa5cdb;
+}
+
+/* Mobile Design */
+@media (max-width: 1150px) {
+    
+    #card {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 400px;
+        border-radius: 10p;
+    }
+    #content {
+        text-align: center;
+        margin: 0;
+    }
+    .features {
+        display: inline-block;
+    }
+    .image {
+        margin: 200px 0 0;
+        width: 100%;
+    }
+    img {
+        width: 100%;
+        content: url("./images/image-header-mobile.jpg")
+    }
+    img {
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    h1 {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 35px;
+    }
+
+    .desc {
+        width: 65%;
+        margin: 20px auto 40px;
+    }
+
+    .feature {
+        margin: 0 0 40px;
+    }
 }
